@@ -3,92 +3,538 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKINCARE SHOP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Flower Shop</title>
     <style>
-    body{
-        background-color: aliceblue;
-        padding: 0;
-        margin: auto;
-        background-image: url(set-skin-care-serums-pink-pastel-background-with-ostrich-feathers-spa-cosmetic-product-cream-jar-branding-mock-up-top-view-with-copy-space_79075-20063.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        
-    }
-    nav{
-        display: flex;
-        justify-content: space-between;
-        background: linear-gradient(to top, rgb(161, 140, 209) 0%, rgb(251, 194, 235) 100%);;
-    }
-    li{
-        display: inline-block;
-        padding: 10px;
-        
-        
-    }
-    li a {
-        text-decoration: none;
-        color: black;
-        font-size: 20px;
-    }
-    li a:hover{
-        color: white;
-    }
-    .logo{
-        text-decoration: none;
-        font-size: 55px;
-        color: white;
-        text-shadow: 0 0 10px white, 0 0 80px white, 0 0 80px white, 0 0 80px white;
-        font-weight: bold;
-    }
-    .HOME-PAGE{
-       text-align: center;
-       position: relative;
-       top: 150px;
-        
-    }
-    h1{
-        font-size: 50px;
-        color: #9b59b6; 
-  text-shadow: 
-    0 0 10px white,     
-    0 0 100px white,    
-    0 0 30px #9b59b6,  
-    0 0 40px #9b59b6,  
-    0 0 50px #9b59b6,  
-    0 0 60px #9b59b6;
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-       
-        font-family: Georgia, 'Times New Roman', Times, serif;
+}
+:root{
+    --primary-text-color: 	#c6aa9d;
+    --secondary-text-color:#cf9490;
+    --accent-color:	#c6aa9d;
+    --accent-color-dark: 	#cf9490;
+    --padding-inline-section:20px;
 
-    }
-    h3{
-        color: white;
-        font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+body{
+    font-family: "Poppins",sans-serif;
+    color: var(--primary-text-color);
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1rem;
+    font-family: 'Roboto',sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.container
+{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding: var(--padding-inline-section);
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-link{
+    color: black;
+    transition: 0.2s ease-out;
+}
+.hover-link:hover{
+    color: var(--accent-color);
+}
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+}
+.secondary-button{
+    border: 0.5px solid var(--secondary-text-color);
+    font-weight: 700;
+    color:black;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--primary-text-color);
+    transition: 0.2s ease-out;
+
+}
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+nav{
+    background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+}
+.main-nav{
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.company-logo img{
+    width: 200px;
+}
+.nav-links{
+    flex-basis: 730px;
+}
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+header{
+    padding: 50px var(--padding-inline-section) 0;
     
-    }
-    .active{
-        color: white;
-    }
+}
+.header-section{
+    justify-content: center;
+    gap: 50px;
+  
+}
+.header-right{
+    max-width: 40vw;
+}
+.header-right h1{
+    margin-top: 20px;
+}
+.get-started-btn{
+    margin-top: 20px;
+}
+    
+
+.header-left img{
+   height: 400px;
+   width: 550px;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+}
+
+.dropdown-content li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.products-section{
+    padding: 20px var(--padding-inline-section) 0;
+    background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+
+}
+.products-header{
+    text-align: center;
+}
+.products-header h2{
+    margin-bottom: 20px;
+}
+.products-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;}
+    
+.products-card{
+    flex-direction: row;
+    gap: 20px;
+    max-width: 500%;
+    text-align: center;
+   
+}
+.products-card img{
+    width: 600px;
+    height: 500px;
+}
+.reviews h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
 
 
+
+.clientImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.clientImage span {
+    margin-left: 10px;
+}
+
+.clientImage img {
+    width: 40px;
+}
+
+.reviewSection {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #cf9490;
+    color: black;
+}
+
+.reviewItem {
+    width: 300px;
+    padding: 10px;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color:  white;
+    border: 1px solid #10102a;
+    transition: all .2s linear;
+    color: black;
+}
+
+.reviewItem:hover {
+    border-color: aqua;
+    transform: scale(1.01);
+    background-color: #090921;
+    box-shadow: 0 0px 5px 0px #cbc0c0;
+}
+
+.top {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top ul {
+    display: flex;
+    list-style: none;
+}
+
+.top ul li {
+    padding-left: 4px;
+}
+
+article p {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    font-family: system-ui;
+}
+
+
+@media screen and (max-width:700px) {
+    .container {
+        height: auto;
+    }
+
+    .description {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .reviewSection {
+        padding: 0;
+    }}
+
+   
+
+   
+ 
+   .card{
+    
+   
+    position: relative;
+    width: 250px;
+height: 200px;
+ 
+
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    padding: 30px 50px;
+    cursor: pointer;
+    background: linear-gradient(109.6deg, rgb(245, 239, 249) 30.1%, rgb(207, 211, 236) 100.2%);
+    
+
+}
+.card:hover{
+    height: 400px;
+   
+}
+.imgbox{
+    position: relative;
+  
+    width: 100%;
+   height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+}
+img{
+    width: 100%;
+   
+    border: 50%;
+
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.content{
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: 1s;
+}
+.card:hover > .content{
+ 
+    opacity: 1;
+    transform: translateY(-170px);
+}
+.content h2{
+  color: black;
+}
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.sub-footer{
+    background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+    padding: var(--padding-inline-section);
+}
+.sub-footer-container{
+    justify-content: center;
+    gap: 30px;
+}
     </style>
 </head>
 <body>
-    <nav>   
-        <a href="#" class="logo">SkinShines</a>
-        <ul>
-            <li ><a href="#" class="active">HOME</a></li>
-            <li><a href="#">PRODUCTS</a></li>
-            <li><a href="#">REVIEWS</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
-
    
-    <div class="HOME-PAGE">
-        <h1>SUITS YOUR SKIN</h1>
-        <H3>The All New Brand For SkinCare</H3>
+  
+  
+    <nav>
+        <div class="container main-nav flex">
+            <a href="#" class="company-logo">
+               <img src="u.jpg" alt="company logo">
+
+            </a>
+            <div class="nav-links">
+               <ul class="flex">
+                <li><a href="index.html" class="hover-link">Home</a></li>
+              
+                <li class="dropdown">
+                    <a href="#products" class="hover-link">Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#flowers">Flowers</a></li>
+                        <li><a href="#bouquets">Bouquets</a></li>
+                        <li><a href="#gifts">Gifts</a></li>
+                    </ul>
+                <li><a href="#reviews" class="hover-link">Reviews</a></li>
+                <li><a href="#footer" class="hover-link secondary-button">Sign in</a></li>
+                <li><a href="#footer" class="hover-link primary-button">Sign up</a></li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container header-section flex">
+            <div class="header-left">
+                <img src="b.jpg" alt="hero image">
+            </div>
+            <div class="header-right">
+               
+                <h1>Buy Flowers For Your Loved Ones</h1>
+                <p>Heartwarming range of flower bouquets with love notes</p><br>
+                <p>starting at @299</p>
+                <a href="index.html" class="primary-button get-started-btn">Get Started</a> 
+            </div>
+        </div>
+
+    </header>
+    <section class="products-section" id="products">
+        <div class="container" style="display: flex; flex-direction: row;">
+            <div class="products-header">
+                <h2>Our Shop</h2>
+                <a href="#" class="secondary-button">See all products <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="container"><div class="card">
+                <div class="imgbox">
+                    <img src="ii.avif">
+                </div>
+                <div class="content">
+                    <h2>Beautiful Flower</h2>
+                   
+                 
+                    <p>Price : Rs 399</p>
+                        
+                       
+                  
+                </div>
+               </div>
+            </div>
+            <div class="container"><div class="card">
+                <div class="imgbox">
+                    <img src="uu.avif">
+                </div>
+                <div class="content">
+                    <h2>Beautiful Flower</h2>
+                   
+                 
+                    <p>Price : Rs 399</p>
+                        
+                       
+                  
+                </div>
+               </div>
+            </div>
+            <div class="container"><div class="card">
+                <div class="imgbox">
+                    <img src="y.avif">
+                </div>
+                <div class="content">
+                    <h2>Beautiful Flower</h2>
+                   
+                 
+                    <p>Price : Rs 399</p>
+                        
+                       
+                  
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews  ">
+        <div class="container flex">
+            <h2> Our Happy Clients </h2>
+           
+        
+    
+            <div class="reviewSection" id="reviews">
+    
+          
+                <div class="reviewItem">
+                    <div class="top">
+                        <div class="clientImage">
+                            <img src="./client.png" alt="">
+                            <span>Raju Sheoran</span>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <article>
+                        <p class="review">VERY BEAUTIFUL FLOWERS I JUST LOVE IT !</p>
+                        <p>Jan 01, 2023</p>
+                    </article>
+                </div>
+    
+                <div class="reviewItem">
+                    <div class="top">
+                        <div class="clientImage">
+                            <img src="./client.png" alt="">
+                            <span>Priya Shah</span>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <article>
+                        <p class="review">Recommended place for fresh flowers !</p>
+                        <p>Jan 01, 2023</p>
+                    </article>
+                </div>
+    
+          
+                <div class="reviewItem">
+                    <div class="top">
+                        <div class="clientImage">
+                            <img src="./client.png" alt="">
+                            <span>Gunjan Saxena</span>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                    <article>
+                        <p class="review">My husband loved your flowers thankyou so much !</p>
+                        <p>Jan 01, 2023</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+       
+    <div class="sub-footer">
+        <div class="container flex sub-footer-container">
+            <a class="hover-link" href="#">Copyright - Flowera.in</a>
+            <a class="hover-link" href="#">Terms & Condition</a>
+            <a class="hover-link" href="#">Security Information</a>
+            <a class="hover-link" href="#">Contact Us</a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </div>
+    </footer>
 </body>
 </html>
